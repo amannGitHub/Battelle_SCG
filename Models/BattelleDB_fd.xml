@@ -1,0 +1,1287 @@
+﻿<DataModel name="NewBattelle" formatVersion="13" modelVersion="7" defQuery="" id="64d66c94-d58c-4b36-8d24-75ab67d2df4b">
+  <Description />
+  <CustomInfo />
+  <DMEOptions>
+    <listBoxTablesWidth>279</listBoxTablesWidth>
+  </DMEOptions>
+  <DBParams>
+    <SqlDialect>ANSI SQL</SqlDialect>
+    <ConnectionString>Provider=SQLOLEDB;Data Source=SQL-PROD;Password=}w3Bu$eR77;User ID=webuser;Initial Catalog=Battelle</ConnectionString>
+    <LoginPrompt>False</LoginPrompt>
+    <GateClass>Korzh.EasyQuery.DataGates.OleDbGate</GateClass>
+  </DBParams>
+  <Tables>
+    <Table class="db" alias="Abstract" schema="dbo" db="" dsgnLayout="" priority="1000" name="Abstract" hints="" quote="False" />
+    <Table class="db" alias="AbstractAuthors" schema="dbo" db="" dsgnLayout="" priority="1000" name="AbstractAuthors" hints="" quote="False" />
+    <Table class="db" alias="AbstractFormat" schema="dbo" db="" dsgnLayout="" priority="1000" name="AbstractFormat" hints="" quote="False" />
+    <Table class="db" alias="AbstractReview" schema="dbo" db="" dsgnLayout="" priority="1000" name="AbstractReview" hints="" quote="False" />
+    <Table class="db" alias="AbstractReviewFormat" schema="dbo" db="" dsgnLayout="" priority="1000" name="AbstractReviewFormat" hints="" quote="False" />
+    <Table class="db" alias="AbstractReviewType" schema="dbo" db="" dsgnLayout="" priority="1000" name="AbstractReviewType" hints="" quote="False" />
+    <Table class="db" alias="Attendance" schema="dbo" db="" dsgnLayout="" priority="1000" name="Attendance" hints="" quote="False" />
+    <Table class="db" alias="Booth" schema="dbo" db="" dsgnLayout="" priority="1000" name="Booth" hints="" quote="False" />
+    <Table class="db" alias="BoothLayout" schema="dbo" db="" dsgnLayout="" priority="1000" name="BoothLayout" hints="" quote="False" />
+    <Table class="db" alias="BoothStaff" schema="dbo" db="" dsgnLayout="" priority="1000" name="BoothStaff" hints="" quote="False" />
+    <Table class="db" alias="BoothStatus" schema="dbo" db="" dsgnLayout="" priority="1000" name="BoothStatus" hints="" quote="False" />
+    <Table class="db" alias="Conference" schema="dbo" db="" dsgnLayout="" priority="1000" name="Conference" hints="" quote="False" />
+    <Table class="db" alias="ConferenceFeeScale" schema="dbo" db="" dsgnLayout="" priority="1000" name="ConferenceFeeScale" hints="" quote="False" />
+    <Table class="db" alias="ConferenceFeeType" schema="dbo" db="" dsgnLayout="" priority="1000" name="ConferenceFeeType" hints="" quote="False" />
+    <Table class="db" alias="ConferenceLedger" schema="dbo" db="" dsgnLayout="" priority="1000" name="ConferenceLedger" hints="" quote="False" />
+    <Table class="db" alias="ConferencePersonRoles" schema="dbo" db="" dsgnLayout="" priority="1000" name="ConferencePersonRoles" hints="" quote="False" />
+    <Table class="db" alias="ConferenceRole" schema="dbo" db="" dsgnLayout="" priority="1000" name="ConferenceRole" hints="" quote="False" />
+    <Table class="db" alias="ConferenceSubject" schema="dbo" db="" dsgnLayout="" priority="1000" name="ConferenceSubject" hints="" quote="False" />
+    <Table class="db" alias="Email" schema="dbo" db="" dsgnLayout="" priority="1000" name="Email" hints="" quote="False" />
+    <Table class="db" alias="Exhibitor" schema="dbo" db="" dsgnLayout="" priority="1000" name="Exhibitor" hints="" quote="False" />
+    <Table class="db" alias="LookupCountry" schema="dbo" db="" dsgnLayout="" priority="1000" name="LookupCountry" hints="" quote="False" />
+    <Table class="db" alias="LookupStateProvince" schema="dbo" db="" dsgnLayout="" priority="1000" name="LookupStateProvince" hints="" quote="False" />
+    <Table class="db" alias="Person" schema="dbo" db="" dsgnLayout="" priority="1000" name="Person" hints="" quote="False" />
+    <Table class="db" alias="PersonArchive" schema="dbo" db="" dsgnLayout="" priority="1000" name="PersonArchive" hints="" quote="False" />
+    <Table class="db" alias="PersonShortCourses" schema="dbo" db="" dsgnLayout="" priority="1000" name="PersonShortCourses" hints="" quote="False" />
+    <Table class="db" alias="PersonSubjects" schema="dbo" db="" dsgnLayout="" priority="1000" name="PersonSubjects" hints="" quote="False" />
+    <Table class="db" alias="Session" schema="dbo" db="" dsgnLayout="" priority="1000" name="Session" hints="" quote="False" />
+    <Table class="db" alias="ShortCourse" schema="dbo" db="" dsgnLayout="" priority="1000" name="ShortCourse" hints="" quote="False" />
+    <Table class="db" alias="ShortCourseGroup" schema="dbo" db="" dsgnLayout="" priority="1000" name="ShortCourseGroup" hints="" quote="False" />
+    <Table class="db" alias="Sponsor" schema="dbo" db="" dsgnLayout="" priority="1000" name="Sponsor" hints="" quote="False" />
+    <Table class="db" alias="SponsorType" schema="dbo" db="" dsgnLayout="" priority="1000" name="SponsorType" hints="" quote="False" />
+    <Table class="db" alias="TopicGroup" schema="dbo" db="" dsgnLayout="" priority="1000" name="TopicGroup" hints="" quote="False" />
+    <Table class="db" alias="TransactionLog" schema="dbo" db="" dsgnLayout="" priority="1000" name="TransactionLog" hints="" quote="False" />
+  </Tables>
+  <Links>
+    <Link table1="Conference" table2="Abstract" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="Abstract" table2="AbstractAuthors" type="Inner" QF="False">
+      <Condition type="FF" expr1="AbstractID" expr2="AbstractID" op="=" />
+    </Link>
+    <Link table1="Person" table2="AbstractAuthors" type="Inner" QF="False">
+      <Condition type="FF" expr1="PersonID" expr2="PersonID" op="=" />
+    </Link>
+    <Link table1="Abstract" table2="AbstractReview" type="Inner" QF="False">
+      <Condition type="FF" expr1="AbstractID" expr2="AbstractID" op="=" />
+    </Link>
+    <Link table1="Session" table2="AbstractReview" type="Inner" QF="False">
+      <Condition type="FF" expr1="SessionID" expr2="SessionID" op="=" />
+    </Link>
+    <Link table1="TopicGroup" table2="AbstractReview" type="Inner" QF="False">
+      <Condition type="FF" expr1="TopicGroupID" expr2="TopicGroupID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="Attendance" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="Exhibitor" table2="Attendance" type="Inner" QF="False">
+      <Condition type="FF" expr1="ExhibitorID" expr2="ExhibitorID" op="=" />
+    </Link>
+    <Link table1="Person" table2="Attendance" type="Inner" QF="False">
+      <Condition type="FF" expr1="PersonID" expr2="PersonID" op="=" />
+    </Link>
+    <Link table1="BoothStatus" table2="Booth" type="Inner" QF="False">
+      <Condition type="FF" expr1="BoothStatus" expr2="BoothStatus" op="=" />
+    </Link>
+    <Link table1="Conference" table2="Booth" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="Exhibitor" table2="Booth" type="Inner" QF="False">
+      <Condition type="FF" expr1="ExhibitorID" expr2="ExhibitorID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="BoothLayout" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="Booth" table2="BoothStaff" type="Inner" QF="False">
+      <Condition type="FF" expr1="BoothID" expr2="BoothID" op="=" />
+    </Link>
+    <Link table1="Person" table2="BoothStaff" type="Inner" QF="False">
+      <Condition type="FF" expr1="PersonID" expr2="PersonID" op="=" />
+    </Link>
+    <Link table1="ConferenceSubject" table2="Conference" type="Inner" QF="False">
+      <Condition type="FF" expr1="SubjectID" expr2="SubjectID" op="=" />
+    </Link>
+    <Link table1="Person" table2="Conference" type="Inner" QF="False">
+      <Condition type="FF" expr1="PersonID" expr2="MeetingPlannerPersonID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="ConferenceFeeScale" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="ConferenceFeeType" table2="ConferenceFeeScale" type="Inner" QF="False">
+      <Condition type="FF" expr1="FeeTypeID" expr2="FeeTypeID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="ConferenceLedger" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="ConferenceFeeType" table2="ConferenceLedger" type="Inner" QF="False">
+      <Condition type="FF" expr1="FeeTypeID" expr2="FeeTypeID" op="=" />
+    </Link>
+    <Link table1="Person" table2="ConferenceLedger" type="Inner" QF="False">
+      <Condition type="FF" expr1="PersonID" expr2="PersonID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="ConferencePersonRoles" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="ConferenceRole" table2="ConferencePersonRoles" type="Inner" QF="False">
+      <Condition type="FF" expr1="RoleID" expr2="RoleID" op="=" />
+    </Link>
+    <Link table1="Person" table2="ConferencePersonRoles" type="Inner" QF="False">
+      <Condition type="FF" expr1="PersonID" expr2="PersonID" op="=" />
+    </Link>
+    <Link table1="Session" table2="ConferencePersonRoles" type="Inner" QF="False">
+      <Condition type="FF" expr1="SessionID" expr2="SessionID" op="=" />
+    </Link>
+    <Link table1="Person" table2="Exhibitor" type="Inner" QF="False">
+      <Condition type="FF" expr1="PersonID" expr2="POCPersonID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="PersonShortCourses" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="Person" table2="PersonShortCourses" type="Inner" QF="False">
+      <Condition type="FF" expr1="PersonID" expr2="PersonID" op="=" />
+    </Link>
+    <Link table1="ShortCourse" table2="PersonShortCourses" type="Inner" QF="False">
+      <Condition type="FF" expr1="CourseID" expr2="CourseID" op="=" />
+    </Link>
+    <Link table1="ConferenceSubject" table2="PersonSubjects" type="Inner" QF="False">
+      <Condition type="FF" expr1="SubjectID" expr2="SubjectID" op="=" />
+    </Link>
+    <Link table1="Person" table2="PersonSubjects" type="Inner" QF="False">
+      <Condition type="FF" expr1="PersonID" expr2="PersonID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="Session" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="TopicGroup" table2="Session" type="Inner" QF="False">
+      <Condition type="FF" expr1="TopicGroupID" expr2="TopicGroupID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="ShortCourse" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="ShortCourseGroup" table2="ShortCourse" type="Inner" QF="False">
+      <Condition type="FF" expr1="GroupID" expr2="GroupID" op="=" />
+    </Link>
+    <Link table1="ConferenceFeeType" table2="ShortCourseGroup" type="Inner" QF="False">
+      <Condition type="FF" expr1="FeeTypeID" expr2="FeeTypeID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="Sponsor" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+    <Link table1="Exhibitor" table2="Sponsor" type="Inner" QF="False">
+      <Condition type="FF" expr1="ExhibitorID" expr2="ExhibitorID" op="=" />
+    </Link>
+    <Link table1="SponsorType" table2="Sponsor" type="Inner" QF="False">
+      <Condition type="FF" expr1="SponsorTypeID" expr2="SponsorTypeID" op="=" />
+    </Link>
+    <Link table1="Conference" table2="TopicGroup" type="Inner" QF="False">
+      <Condition type="FF" expr1="ConferenceID" expr2="ConferenceID" op="=" />
+    </Link>
+  </Links>
+  <Editors />
+  <Operators>
+    <Operator id="Equal" caption="" expr="{expr1} = {expr2}" format="{expr1} [[is equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotEqual" caption="is not equal to" expr="{expr1} &lt;&gt; {expr2}" format="{expr1} [[is not equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="LessThan" caption="is less than" expr="{expr1} &lt; {expr2}" format="{expr1} [[is less than]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="LessOrEqual" caption="is less than or equal to" expr="{expr1} &lt;= {expr2}" format="{expr1} [[is less than or equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="GreaterThan" caption="is greater than" expr="{expr1} &gt; {expr2}" format="{expr1} [[is greater than]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="GreaterOrEqual" caption="is greater than or equal to" expr="{expr1} &gt;= {expr2}" format="{expr1} [[is greater than or equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="IsNull" caption="is null" expr="{expr1} IS NULL" format="{expr1} [[is null]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="IsNotNull" caption="is not null" expr="{expr1} IS NOT NULL" format="{expr1} [[is not null]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="IsTrue" caption="is true" expr="{expr1} = ${true}" format="{expr1} [[is true]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Boolean operators" cond="False" tables="">
+      <Types>Bool</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotTrue" caption="is not true" expr="(({expr1} &lt;&gt; ${true}) OR ({expr1} IS NULL))" format="{expr1} [[is not true]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Boolean operators" cond="False" tables="">
+      <Types>Bool</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="InList" caption="is in list" expr="{expr1} in ({expr2})" format="{expr1} [[is in list]] {expr2}" constFmt="{const}" kind="List" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotInList" caption="is not in list" expr="NOT ({expr1} in ({expr2}))" format="{expr1} [[is not in list]] {expr2}" constFmt="{const}" kind="List" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="Between" caption="is between" expr="{expr1} BETWEEN {expr2} AND {expr3}" format="{expr1} [[is between]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotBetween" caption="is not between" expr="NOT ({expr1} BETWEEN {expr2} AND {expr3})" format="{expr1} [[is not between]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="StartsWith" caption="starts with" expr="{expr1} LIKE {expr2}" format="{expr1} [[starts with]] {expr2}" constFmt="{const}{ws}" kind="Scalar" caseIns="False" group="String operators" cond="False" tables="">
+      <Types>String,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotStartsWith" caption="does not start with" expr="NOT ({expr1} LIKE {expr2})" format="{expr1} [[does not start with]] s{expr2}" constFmt="{const}{ws}" kind="Scalar" caseIns="False" group="String operators" cond="False" tables="">
+      <Types>String,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="Contains" caption="contains" expr="{expr1} LIKE {expr2}" format="{expr1}  [[contains]] {expr2}" constFmt="{ws}{const}{ws}" kind="Scalar" caseIns="False" group="String operators" cond="False" tables="">
+      <Types>String,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotContains" caption="does not contain" expr="NOT ({expr1} LIKE {expr2})" format="{expr1} [[does not contain]] {expr2}" constFmt="{ws}{const}{ws}" kind="Scalar" caseIns="False" group="String operators" cond="False" tables="">
+      <Types>String,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="InSubQuery" caption="in sub query" expr="{expr1} IN ({expr2})" format="{expr1} [[in sub query]] {expr2}" constFmt="{const}" kind="Query" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinToday" caption="today" expr="${{Today}} &lt;= {expr1} AND {expr1} &lt; ${{Tomorrow}}" format="{expr1} [[within today]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinThisWeek" caption="this week" expr="${{FirstDayOfWeek}} &lt;= {expr1} AND {expr1} &lt; ${{FirstDayOfNextWeek}}" format="{expr1} [[within this week]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinThisMonth" caption="this month" expr="${{FirstDayOfMonth}} &lt;= {expr1} AND {expr1} &lt; ${{FirstDayOfNextMonth}}" format="{expr1} [[within this month]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinPrevMonth" caption="previous month" expr="${{FirstDayOfPrevMonth}} &lt;= {expr1} AND {expr1} &lt; ${{FirstDayOfMonth}}" format="{expr1} [[within previous month]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateWithinThisYear" caption="this year" expr="${{FirstDayOfYear}} &lt;= {expr1} AND {expr1} &lt; ${{FirstDayOfNextYear}}" format="{expr1} [[within this year]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateBeforePrecise" caption="before" expr="{expr1} &lt; {expr2}" format="{expr1} [[before]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateAfterPrecise" caption="after" expr="{expr1} &gt;= {expr2}" format="{expr1} [[after]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DatePeriodPrecise" caption="custom period" expr="{expr1} BETWEEN {expr2} AND {expr3}" format="{expr1} [[within]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="TimeBeforePrecise" caption="before" expr="{expr1} &lt; {expr2}" format="{expr1} [[before]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="TimeAfterPrecise" caption="after" expr="{expr1} &gt;= {expr2}" format="{expr1} [[after]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="TimePeriodPrecise" caption="custom period" expr="{expr1} BETWEEN {expr2} AND {expr3}" format="{expr1} [[within]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="MaximumOfAttr" caption="is maximum of" expr="{expr1} = (SELECT MAX({expr2.field}) from {expr2.table})" format="{expr1} [[is maximum of]] {expr2}" constFmt="{const}" kind="Attribute" caseIns="False" group="Other operators" cond="False" tables="">
+      <Types>String,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar,Date,DateTime,Time</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+  </Operators>
+  <Entities maxId="0">
+    <Entity id="" name="Abstract" UIC="True" UIR="True" UIS="True">
+      <Attr id="Abstract.AbstractID" kind="Data" expr="AbstractID" caption="AbstractID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AbstractCode" kind="Data" expr="AbstractCode" caption="AbstractCode" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.Title" kind="Data" expr="Title" caption="Title" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AuthorList" kind="Data" expr="AuthorList" caption="AuthorList" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.DateReceived" kind="Data" expr="DateReceived" caption="DateReceived" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.PreferredFormat" kind="Data" expr="PreferredFormat" caption="PreferredFormat" type="String" size="20" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.SubmissionRequestedBy" kind="Data" expr="SubmissionRequestedBy" caption="SubmissionRequestedBy" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AuthorComments" kind="Data" expr="AuthorComments" caption="AuthorComments" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ApplicableTopics" kind="Data" expr="ApplicableTopics" caption="ApplicableTopics" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.NewTopicArea" kind="Data" expr="NewTopicArea" caption="NewTopicArea" type="String" size="200" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AbstractContent" kind="Data" expr="AbstractContent" caption="AbstractContent" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AbstractTitleAuthorBlock" kind="Data" expr="AbstractTitleAuthorBlock" caption="AbstractTitleAuthorBlock" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AbstractBG" kind="Data" expr="AbstractBG" caption="AbstractBG" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AbstractApproach" kind="Data" expr="AbstractApproach" caption="AbstractApproach" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AbstractResults" kind="Data" expr="AbstractResults" caption="AbstractResults" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.FileName" kind="Data" expr="FileName" caption="FileName" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.FileSize" kind="Data" expr="FileSize" caption="FileSize" type="Int64" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ContentType" kind="Data" expr="ContentType" caption="ContentType" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.UploadedFile" kind="Data" expr="UploadedFile" caption="UploadedFile" type="Blob" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.LoginNotes" kind="Data" expr="LoginNotes" caption="LoginNotes" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.WithdrawnDate" kind="Data" expr="WithdrawnDate" caption="WithdrawnDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ReadyForReview" kind="Data" expr="ReadyForReview" caption="ReadyForReview" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.TopicGroupID" kind="Data" expr="TopicGroupID" caption="TopicGroupID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.SessionID" kind="Data" expr="SessionID" caption="SessionID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.Declined" kind="Data" expr="Declined" caption="Declined" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ProgramChairFinal" kind="Data" expr="ProgramChairFinal" caption="ProgramChairFinal" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.SteeringComFinal" kind="Data" expr="SteeringComFinal" caption="SteeringComFinal" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ReadyForSessionChair" kind="Data" expr="ReadyForSessionChair" caption="ReadyForSessionChair" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.SessionChairFinal" kind="Data" expr="SessionChairFinal" caption="SessionChairFinal" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ReviewNotes" kind="Data" expr="ReviewNotes" caption="ReviewNotes" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.FinalFormat" kind="Data" expr="FinalFormat" caption="FinalFormat" type="String" size="20" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.FinalDate" kind="Data" expr="FinalDate" caption="FinalDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AdminPersonID" kind="Data" expr="AdminPersonID" caption="AdminPersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.AdminReviewDate" kind="Data" expr="AdminReviewDate" caption="AdminReviewDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.DeclineNotes" kind="Data" expr="DeclineNotes" caption="DeclineNotes" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.PlatformTime" kind="Data" expr="PlatformTime" caption="PlatformTime" type="String" size="16" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.PosterNum" kind="Data" expr="PosterNum" caption="PosterNum" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.UpdatedAbstractReceived" kind="Data" expr="UpdatedAbstractReceived" caption="UpdatedAbstractReceived" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.UpdatedAbstractNotes" kind="Data" expr="UpdatedAbstractNotes" caption="UpdatedAbstractNotes" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ProcPaperReceived" kind="Data" expr="ProcPaperReceived" caption="ProcPaperReceived" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ProcPaperNotes" kind="Data" expr="ProcPaperNotes" caption="ProcPaperNotes" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ProcPaperTitle" kind="Data" expr="ProcPaperTitle" caption="ProcPaperTitle" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ProcPaperAuthList" kind="Data" expr="ProcPaperAuthList" caption="ProcPaperAuthList" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.SpeakerBioReceived" kind="Data" expr="SpeakerBioReceived" caption="SpeakerBioReceived" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+      <Attr id="Abstract.ProcDocNum" kind="Data" expr="ProcDocNum" caption="ProcDocNum" type="String" size="25" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Abstract">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="AbstractAuthors" UIC="True" UIR="True" UIS="True">
+      <UserData />
+      <Attr id="AbstractAuthors.AbstractID" kind="Data" expr="AbstractID" caption="AbstractID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractAuthors">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractAuthors.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractAuthors">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractAuthors.Presenter" kind="Data" expr="Presenter" caption="Presenter" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractAuthors">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="AbstractFormat" UIC="True" UIR="True" UIS="True">
+      <Attr id="AbstractFormat.FormatType" kind="Data" expr="FormatType" caption="FormatType" type="String" size="20" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractFormat">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="AbstractReview" UIC="True" UIR="True" UIS="True">
+      <Attr id="AbstractReview.AbstractReviewID" kind="Data" expr="AbstractReviewID" caption="AbstractReviewID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.AbstractID" kind="Data" expr="AbstractID" caption="AbstractID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.ReviewTypeID" kind="Data" expr="ReviewTypeID" caption="ReviewTypeID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.RelatedAbstracts" kind="Data" expr="RelatedAbstracts" caption="RelatedAbstracts" type="String" size="200" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.TopicGroupID" kind="Data" expr="TopicGroupID" caption="TopicGroupID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.SessionID" kind="Data" expr="SessionID" caption="SessionID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.SkipSteeringComm" kind="Data" expr="SkipSteeringComm" caption="SkipSteeringComm" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.Comments" kind="Data" expr="Comments" caption="Comments" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.Decline" kind="Data" expr="Decline" caption="Decline" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.PresentationFormat" kind="Data" expr="PresentationFormat" caption="PresentationFormat" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.ReviewDate" kind="Data" expr="ReviewDate" caption="ReviewDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.FinalDate" kind="Data" expr="FinalDate" caption="FinalDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReview.GeneralComments" kind="Data" expr="GeneralComments" caption="GeneralComments" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReview">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="AbstractReviewFormat" UIC="True" UIR="True" UIS="True">
+      <Attr id="AbstractReviewFormat.PresentationFormat" kind="Data" expr="PresentationFormat" caption="PresentationFormat" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReviewFormat">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="AbstractReviewType" UIC="True" UIR="True" UIS="True">
+      <Attr id="AbstractReviewType.ReviewTypeID" kind="Data" expr="ReviewTypeID" caption="ReviewTypeID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReviewType">
+        <Operators />
+      </Attr>
+      <Attr id="AbstractReviewType.ReviewType" kind="Data" expr="ReviewType" caption="ReviewType" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="AbstractReviewType">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="Attendance" UIC="True" UIR="True" UIS="True">
+      <Attr id="Attendance.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Attendance">
+        <Operators />
+      </Attr>
+      <Attr id="Attendance.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Attendance">
+        <Operators />
+      </Attr>
+      <Attr id="Attendance.ExhibitorID" kind="Data" expr="ExhibitorID" caption="ExhibitorID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Attendance">
+        <Operators />
+      </Attr>
+      <Attr id="Attendance.RegListOptOut" kind="Data" expr="RegListOptOut" caption="RegListOptOut" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Attendance">
+        <Operators />
+      </Attr>
+      <Attr id="Attendance.SpecialNeeds" kind="Data" expr="SpecialNeeds" caption="SpecialNeeds" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Attendance">
+        <Operators />
+      </Attr>
+      <Attr id="Attendance.RegistrationType" kind="Data" expr="RegistrationType" caption="RegistrationType" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Attendance">
+        <Operators />
+      </Attr>
+      <Attr id="Attendance.OneDayPassDate" kind="Data" expr="OneDayPassDate" caption="OneDayPassDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Attendance">
+        <Operators />
+      </Attr>
+      <Attr id="Attendance.RegisterDate" kind="Data" expr="RegisterDate" caption="RegisterDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Attendance">
+        <Operators />
+      </Attr>
+      <Attr id="Attendance.NoShow" kind="Data" expr="NoShow" caption="NoShow" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Attendance">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="Booth" UIC="True" UIR="True" UIS="True">
+      <Attr id="Booth.BoothID" kind="Data" expr="BoothID" caption="BoothID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.BoothNumber" kind="Data" expr="BoothNumber" caption="BoothNumber" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.BoothStatus" kind="Data" expr="BoothStatus" caption="BoothStatus" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.MarginLeft" kind="Data" expr="MarginLeft" caption="MarginLeft" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.MarginTop" kind="Data" expr="MarginTop" caption="MarginTop" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.ExhibitorID" kind="Data" expr="ExhibitorID" caption="ExhibitorID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.Vertical" kind="Data" expr="Vertical" caption="Vertical" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.UseImage" kind="Data" expr="UseImage" caption="UseImage" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.ImageDisabled" kind="Data" expr="ImageDisabled" caption="ImageDisabled" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.ImageActive" kind="Data" expr="ImageActive" caption="ImageActive" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.ImageReserved" kind="Data" expr="ImageReserved" caption="ImageReserved" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.BoothWidth" kind="Data" expr="BoothWidth" caption="BoothWidth" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.BoothHeight" kind="Data" expr="BoothHeight" caption="BoothHeight" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.EndCap" kind="Data" expr="EndCap" caption="EndCap" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+      <Attr id="Booth.IslandBooth" kind="Data" expr="IslandBooth" caption="IslandBooth" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Booth">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="BoothLayout" UIC="True" UIR="True" UIS="True">
+      <Attr id="BoothLayout.BoothLayoutID" kind="Data" expr="BoothLayoutID" caption="BoothLayoutID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ImageName" kind="Data" expr="ImageName" caption="ImageName" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ImageWidth" kind="Data" expr="ImageWidth" caption="ImageWidth" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ImageHeight" kind="Data" expr="ImageHeight" caption="ImageHeight" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ColorAvailable" kind="Data" expr="ColorAvailable" caption="ColorAvailable" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ColorAvailableText" kind="Data" expr="ColorAvailableText" caption="ColorAvailableText" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ColorReserved" kind="Data" expr="ColorReserved" caption="ColorReserved" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ColorReservedText" kind="Data" expr="ColorReservedText" caption="ColorReservedText" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ColorDisabled" kind="Data" expr="ColorDisabled" caption="ColorDisabled" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.ColorDisabledText" kind="Data" expr="ColorDisabledText" caption="ColorDisabledText" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.BoothWidth" kind="Data" expr="BoothWidth" caption="BoothWidth" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.BoothHeight" kind="Data" expr="BoothHeight" caption="BoothHeight" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+      <Attr id="BoothLayout.FontSizePx" kind="Data" expr="FontSizePx" caption="FontSizePx" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothLayout">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="BoothStaff" UIC="True" UIR="True" UIS="True">
+      <Attr id="BoothStaff.BoothID" kind="Data" expr="BoothID" caption="BoothID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothStaff">
+        <Operators />
+      </Attr>
+      <Attr id="BoothStaff.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothStaff">
+        <Operators />
+      </Attr>
+      <Attr id="BoothStaff.AddedDate" kind="Data" expr="AddedDate" caption="AddedDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothStaff">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="BoothStatus" UIC="True" UIR="True" UIS="True">
+      <Attr id="BoothStatus.BoothStatus" kind="Data" expr="BoothStatus" caption="BoothStatus" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="BoothStatus">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="Conference" UIC="True" UIR="True" UIS="True">
+      <Attr id="Conference.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.SubjectID" kind="Data" expr="SubjectID" caption="SubjectID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.Name" kind="Data" expr="Name" caption="Name" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ShortName" kind="Data" expr="ShortName" caption="ShortName" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.URLString" kind="Data" expr="URLString" caption="URLString" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.StartDate" kind="Data" expr="StartDate" caption="StartDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.EndDate" kind="Data" expr="EndDate" caption="EndDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.Venue" kind="Data" expr="Venue" caption="Venue" type="String" size="200" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.VenueAddress" kind="Data" expr="VenueAddress" caption="VenueAddress" type="String" size="300" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.VenuePhone" kind="Data" expr="VenuePhone" caption="VenuePhone" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.VenueURL" kind="Data" expr="VenueURL" caption="VenueURL" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.City" kind="Data" expr="City" caption="City" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.State" kind="Data" expr="State" caption="State" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ZipCode" kind="Data" expr="ZipCode" caption="ZipCode" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ConferenceType" kind="Data" expr="ConferenceType" caption="ConferenceType" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ReturnURL" kind="Data" expr="ReturnURL" caption="ReturnURL" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.AbstractsDueDate" kind="Data" expr="AbstractsDueDate" caption="AbstractsDueDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ExampleAbstractURL" kind="Data" expr="ExampleAbstractURL" caption="ExampleAbstractURL" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.AbstractReturnURL" kind="Data" expr="AbstractReturnURL" caption="AbstractReturnURL" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.TechnicalProgramScopeURL" kind="Data" expr="TechnicalProgramScopeURL" caption="TechnicalProgramScopeURL" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.PreliminaryProgramDate" kind="Data" expr="PreliminaryProgramDate" caption="PreliminaryProgramDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.FinalPlacementDate" kind="Data" expr="FinalPlacementDate" caption="FinalPlacementDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.SponsorOpportunityURL" kind="Data" expr="SponsorOpportunityURL" caption="SponsorOpportunityURL" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.SponsorReservationDate" kind="Data" expr="SponsorReservationDate" caption="SponsorReservationDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ExhibitPageOpen" kind="Data" expr="ExhibitPageOpen" caption="ExhibitPageOpen" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ExhibitRegistrationDate" kind="Data" expr="ExhibitRegistrationDate" caption="ExhibitRegistrationDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ExhibitRegistrationCloseDate" kind="Data" expr="ExhibitRegistrationCloseDate" caption="ExhibitRegistrationCloseDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ExhibitPayByDate" kind="Data" expr="ExhibitPayByDate" caption="ExhibitPayByDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ExhibitCancelByDate" kind="Data" expr="ExhibitCancelByDate" caption="ExhibitCancelByDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.WhoShouldExhibit" kind="Data" expr="WhoShouldExhibit" caption="WhoShouldExhibit" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.BoothStaffCount" kind="Data" expr="BoothStaffCount" caption="BoothStaffCount" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.BoothStaffRegisterByDate" kind="Data" expr="BoothStaffRegisterByDate" caption="BoothStaffRegisterByDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.BoothStaffChangeFee" kind="Data" expr="BoothStaffChangeFee" caption="BoothStaffChangeFee" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.TermsConditions" kind="Data" expr="TermsConditions" caption="TermsConditions" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.SponsorTermsConditions" kind="Data" expr="SponsorTermsConditions" caption="SponsorTermsConditions" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.TechSessionStaffCount" kind="Data" expr="TechSessionStaffCount" caption="TechSessionStaffCount" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.TechSessionFee" kind="Data" expr="TechSessionFee" caption="TechSessionFee" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.TechSessionStaffCancelByDate" kind="Data" expr="TechSessionStaffCancelByDate" caption="TechSessionStaffCancelByDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.TechSessionCancelServiceFee" kind="Data" expr="TechSessionCancelServiceFee" caption="TechSessionCancelServiceFee" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.MailingListFirstDate" kind="Data" expr="MailingListFirstDate" caption="MailingListFirstDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.MailingListSecondDate" kind="Data" expr="MailingListSecondDate" caption="MailingListSecondDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.MailingListFee" kind="Data" expr="MailingListFee" caption="MailingListFee" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.RegistrationFeeIncreaseDate" kind="Data" expr="RegistrationFeeIncreaseDate" caption="RegistrationFeeIncreaseDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.RegistrationCancelByDate" kind="Data" expr="RegistrationCancelByDate" caption="RegistrationCancelByDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.RegistrationCloseDate" kind="Data" expr="RegistrationCloseDate" caption="RegistrationCloseDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ShortCourseOpen" kind="Data" expr="ShortCourseOpen" caption="ShortCourseOpen" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ShortCourseClose" kind="Data" expr="ShortCourseClose" caption="ShortCourseClose" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.NoRefundDate" kind="Data" expr="NoRefundDate" caption="NoRefundDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.MeetingPlannerPersonID" kind="Data" expr="MeetingPlannerPersonID" caption="MeetingPlannerPersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.MeetingPlanner" kind="Data" expr="MeetingPlanner" caption="MeetingPlanner" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.ConferenceEmail" kind="Data" expr="ConferenceEmail" caption="ConferenceEmail" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.SCGContractCode" kind="Data" expr="SCGContractCode" caption="SCGContractCode" type="String" size="20" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.CouponCode" kind="Data" expr="CouponCode" caption="CouponCode" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+      <Attr id="Conference.CreateDate" kind="Data" expr="CreateDate" caption="CreateDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Conference">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="ConferenceFeeScale" UIC="True" UIR="True" UIS="True">
+      <Attr id="ConferenceFeeScale.ConferenceFeeID" kind="Data" expr="ConferenceFeeID" caption="ConferenceFeeID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceFeeScale">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceFeeScale.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceFeeScale">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceFeeScale.FeeTypeID" kind="Data" expr="FeeTypeID" caption="FeeTypeID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceFeeScale">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceFeeScale.Fee" kind="Data" expr="Fee" caption="Fee" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceFeeScale">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceFeeScale.PayStartDate" kind="Data" expr="PayStartDate" caption="PayStartDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceFeeScale">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="ConferenceFeeType" UIC="True" UIR="True" UIS="True">
+      <Attr id="ConferenceFeeType.FeeTypeID" kind="Data" expr="FeeTypeID" caption="FeeTypeID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceFeeType">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceFeeType.FeeType" kind="Data" expr="FeeType" caption="FeeType" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceFeeType">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="ConferenceLedger" UIC="True" UIR="True" UIS="True">
+      <Attr id="ConferenceLedger.LedgerID" kind="Data" expr="LedgerID" caption="LedgerID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceLedger">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceLedger.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceLedger">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceLedger.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceLedger">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceLedger.FeeTypeID" kind="Data" expr="FeeTypeID" caption="FeeTypeID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceLedger">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceLedger.TransactionDate" kind="Data" expr="TransactionDate" caption="TransactionDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceLedger">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceLedger.Amount" kind="Data" expr="Amount" caption="Amount" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceLedger">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceLedger.Notes" kind="Data" expr="Notes" caption="Notes" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceLedger">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="ConferencePersonRoles" UIC="True" UIR="True" UIS="True">
+      <Attr id="ConferencePersonRoles.PersonRoleID" kind="Data" expr="PersonRoleID" caption="PersonRoleID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferencePersonRoles">
+        <Operators />
+      </Attr>
+      <Attr id="ConferencePersonRoles.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferencePersonRoles">
+        <Operators />
+      </Attr>
+      <Attr id="ConferencePersonRoles.RoleID" kind="Data" expr="RoleID" caption="RoleID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferencePersonRoles">
+        <Operators />
+      </Attr>
+      <Attr id="ConferencePersonRoles.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferencePersonRoles">
+        <Operators />
+      </Attr>
+      <Attr id="ConferencePersonRoles.TopicGroupID" kind="Data" expr="TopicGroupID" caption="TopicGroupID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferencePersonRoles">
+        <Operators />
+      </Attr>
+      <Attr id="ConferencePersonRoles.SessionID" kind="Data" expr="SessionID" caption="SessionID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferencePersonRoles">
+        <Operators />
+      </Attr>
+      <Attr id="ConferencePersonRoles.LeadChair" kind="Data" expr="LeadChair" caption="LeadChair" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferencePersonRoles">
+        <Operators />
+      </Attr>
+      <Attr id="ConferencePersonRoles.ListOrder" kind="Data" expr="ListOrder" caption="ListOrder" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferencePersonRoles">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="ConferenceRole" UIC="True" UIR="True" UIS="True">
+      <Attr id="ConferenceRole.RoleID" kind="Data" expr="RoleID" caption="RoleID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceRole">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceRole.RoleName" kind="Data" expr="RoleName" caption="RoleName" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceRole">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="ConferenceSubject" UIC="True" UIR="True" UIS="True">
+      <Attr id="ConferenceSubject.SubjectID" kind="Data" expr="SubjectID" caption="SubjectID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceSubject">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceSubject.Subject" kind="Data" expr="Subject" caption="Subject" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceSubject">
+        <Operators />
+      </Attr>
+      <Attr id="ConferenceSubject.SubjectEmail" kind="Data" expr="SubjectEmail" caption="SubjectEmail" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ConferenceSubject">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="Email" UIC="True" UIR="True" UIS="True">
+      <Attr id="Email.EmailID" kind="Data" expr="EmailID" caption="EmailID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Email">
+        <Operators />
+      </Attr>
+      <Attr id="Email.EmailName" kind="Data" expr="EmailName" caption="EmailName" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Email">
+        <Operators />
+      </Attr>
+      <Attr id="Email.EmailHTML" kind="Data" expr="EmailHTML" caption="EmailHTML" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Email">
+        <Operators />
+      </Attr>
+      <Attr id="Email.EmailPlainText" kind="Data" expr="EmailPlainText" caption="EmailPlainText" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Email">
+        <Operators />
+      </Attr>
+      <Attr id="Email.EmailCopyToSCG" kind="Data" expr="EmailCopyToSCG" caption="EmailCopyToSCG" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Email">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="Exhibitor" UIC="True" UIR="True" UIS="True">
+      <Attr id="Exhibitor.ExhibitorID" kind="Data" expr="ExhibitorID" caption="ExhibitorID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.Exhibitor" kind="Data" expr="Exhibitor" caption="Exhibitor" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.OrganizationID" kind="Data" expr="OrganizationID" caption="OrganizationID" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.AddressLine1" kind="Data" expr="AddressLine1" caption="AddressLine1" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.AddressLine2" kind="Data" expr="AddressLine2" caption="AddressLine2" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.AddressLine3" kind="Data" expr="AddressLine3" caption="AddressLine3" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.City" kind="Data" expr="City" caption="City" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.StateProvince" kind="Data" expr="StateProvince" caption="StateProvince" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.ZipPostal" kind="Data" expr="ZipPostal" caption="ZipPostal" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.Country" kind="Data" expr="Country" caption="Country" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.POCPersonID" kind="Data" expr="POCPersonID" caption="POCPersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+      <Attr id="Exhibitor.CreateDate" kind="Data" expr="CreateDate" caption="CreateDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Exhibitor">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="LookupCountry" UIC="True" UIR="True" UIS="True">
+      <Attr id="LookupCountry.CountryCode" kind="Data" expr="CountryCode" caption="CountryCode" type="String" size="4" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LookupCountry">
+        <Operators />
+      </Attr>
+      <Attr id="LookupCountry.CountryName" kind="Data" expr="CountryName" caption="CountryName" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LookupCountry">
+        <Operators />
+      </Attr>
+      <Attr id="LookupCountry.ListOrder" kind="Data" expr="ListOrder" caption="ListOrder" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LookupCountry">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="LookupStateProvince" UIC="True" UIR="True" UIS="True">
+      <Attr id="LookupStateProvince.StateProvinceAbbreviation" kind="Data" expr="StateProvinceAbbreviation" caption="StateProvinceAbbreviation" type="String" size="10" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LookupStateProvince">
+        <Operators />
+      </Attr>
+      <Attr id="LookupStateProvince.StateProvinceName" kind="Data" expr="StateProvinceName" caption="StateProvinceName" type="String" size="200" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LookupStateProvince">
+        <Operators />
+      </Attr>
+      <Attr id="LookupStateProvince.CountryCode" kind="Data" expr="CountryCode" caption="CountryCode" type="String" size="4" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LookupStateProvince">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="Person" UIC="True" UIR="True" UIS="True">
+      <Attr id="Person.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.ParticipationID" kind="Data" expr="ParticipationID" caption="ParticipationID" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.FirstName" kind="Data" expr="FirstName" caption="FirstName" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.LastName" kind="Data" expr="LastName" caption="LastName" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.Employer" kind="Data" expr="Employer" caption="Employer" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.AddressLine1" kind="Data" expr="AddressLine1" caption="AddressLine1" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.AddressLine2" kind="Data" expr="AddressLine2" caption="AddressLine2" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.AddressLine3" kind="Data" expr="AddressLine3" caption="AddressLine3" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.City" kind="Data" expr="City" caption="City" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.StateProvince" kind="Data" expr="StateProvince" caption="StateProvince" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.ZipPostal" kind="Data" expr="ZipPostal" caption="ZipPostal" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.Country" kind="Data" expr="Country" caption="Country" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.PhoneNum" kind="Data" expr="PhoneNum" caption="PhoneNum" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.CellNum" kind="Data" expr="CellNum" caption="CellNum" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.Email" kind="Data" expr="Email" caption="Email" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.AltPOC" kind="Data" expr="AltPOC" caption="AltPOC" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.EnteredBy" kind="Data" expr="EnteredBy" caption="EnteredBy" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.EnteredSource" kind="Data" expr="EnteredSource" caption="EnteredSource" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.EnteredDate" kind="Data" expr="EnteredDate" caption="EnteredDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.ModifiedBy" kind="Data" expr="ModifiedBy" caption="ModifiedBy" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.ModifiedSource" kind="Data" expr="ModifiedSource" caption="ModifiedSource" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.ModifiedDate" kind="Data" expr="ModifiedDate" caption="ModifiedDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.Notes" kind="Data" expr="Notes" caption="Notes" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.InvalidAddress" kind="Data" expr="InvalidAddress" caption="InvalidAddress" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.ExhibitInfo" kind="Data" expr="ExhibitInfo" caption="ExhibitInfo" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.OmitFromMassEmails" kind="Data" expr="OmitFromMassEmails" caption="OmitFromMassEmails" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.SpecialNeeds" kind="Data" expr="SpecialNeeds" caption="SpecialNeeds" type="String" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.SedCorrPres" kind="Data" expr="SedCorrPres" caption="SedCorrPres" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.SedCoAuth" kind="Data" expr="SedCoAuth" caption="SedCoAuth" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.SedChrProspect" kind="Data" expr="SedChrProspect" caption="SedChrProspect" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.SedOtherRole" kind="Data" expr="SedOtherRole" caption="SedOtherRole" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.BioChrProspect" kind="Data" expr="BioChrProspect" caption="BioChrProspect" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.BioOtherRole" kind="Data" expr="BioOtherRole" caption="BioOtherRole" type="String" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+      <Attr id="Person.PersonArchive" kind="Data" expr="PersonArchive" caption="PersonArchive" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Person">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="PersonArchive" UIC="True" UIR="True" UIS="True">
+      <Attr id="PersonArchive.PersonArchivedID" kind="Data" expr="PersonArchivedID" caption="PersonArchivedID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonArchive">
+        <Operators />
+      </Attr>
+      <Attr id="PersonArchive.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonArchive">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="PersonShortCourses" UIC="True" UIR="True" UIS="True">
+      <Attr id="PersonShortCourses.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonShortCourses">
+        <Operators />
+      </Attr>
+      <Attr id="PersonShortCourses.CourseID" kind="Data" expr="CourseID" caption="CourseID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonShortCourses">
+        <Operators />
+      </Attr>
+      <Attr id="PersonShortCourses.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonShortCourses">
+        <Operators />
+      </Attr>
+      <Attr id="PersonShortCourses.ReservationDate" kind="Data" expr="ReservationDate" caption="ReservationDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonShortCourses">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="PersonSubjects" UIC="True" UIR="True" UIS="True">
+      <Attr id="PersonSubjects.PersonID" kind="Data" expr="PersonID" caption="PersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonSubjects">
+        <Operators />
+      </Attr>
+      <Attr id="PersonSubjects.SubjectID" kind="Data" expr="SubjectID" caption="SubjectID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonSubjects">
+        <Operators />
+      </Attr>
+      <Attr id="PersonSubjects.OptOut" kind="Data" expr="OptOut" caption="OptOut" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonSubjects">
+        <Operators />
+      </Attr>
+      <Attr id="PersonSubjects.OptOutDate" kind="Data" expr="OptOutDate" caption="OptOutDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="PersonSubjects">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="Session" UIC="True" UIR="True" UIS="True">
+      <Attr id="Session.SessionID" kind="Data" expr="SessionID" caption="SessionID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.TopicGroupID" kind="Data" expr="TopicGroupID" caption="TopicGroupID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.TopicCode" kind="Data" expr="TopicCode" caption="TopicCode" type="String" size="20" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.TemporarySessionCode" kind="Data" expr="TemporarySessionCode" caption="TemporarySessionCode" type="String" size="20" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.SessionCode" kind="Data" expr="SessionCode" caption="SessionCode" type="String" size="10" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.SessionName" kind="Data" expr="SessionName" caption="SessionName" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.PlatformSlots" kind="Data" expr="PlatformSlots" caption="PlatformSlots" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.PlatformDate" kind="Data" expr="PlatformDate" caption="PlatformDate" type="String" size="10" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.PosterDate" kind="Data" expr="PosterDate" caption="PosterDate" type="String" size="10" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.PlatformBreakfast" kind="Data" expr="PlatformBreakfast" caption="PlatformBreakfast" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+      <Attr id="Session.Deactivate" kind="Data" expr="Deactivate" caption="Deactivate" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Session">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="ShortCourse" UIC="True" UIR="True" UIS="True">
+      <Attr id="ShortCourse.CourseID" kind="Data" expr="CourseID" caption="CourseID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourse">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourse.CourseName" kind="Data" expr="CourseName" caption="CourseName" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourse">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourse.CoursePresenter" kind="Data" expr="CoursePresenter" caption="CoursePresenter" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourse">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourse.GroupID" kind="Data" expr="GroupID" caption="GroupID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourse">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourse.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourse">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourse.Cancelled" kind="Data" expr="Cancelled" caption="Cancelled" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourse">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="ShortCourseGroup" UIC="True" UIR="True" UIS="True">
+      <Attr id="ShortCourseGroup.GroupID" kind="Data" expr="GroupID" caption="GroupID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourseGroup">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourseGroup.GroupName" kind="Data" expr="GroupName" caption="GroupName" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourseGroup">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourseGroup.FullDay" kind="Data" expr="FullDay" caption="FullDay" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourseGroup">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourseGroup.FeeTypeID" kind="Data" expr="FeeTypeID" caption="FeeTypeID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourseGroup">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourseGroup.ListOrder" kind="Data" expr="ListOrder" caption="ListOrder" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourseGroup">
+        <Operators />
+      </Attr>
+      <Attr id="ShortCourseGroup.CourseDate" kind="Data" expr="CourseDate" caption="CourseDate" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ShortCourseGroup">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="Sponsor" UIC="True" UIR="True" UIS="True">
+      <Attr id="Sponsor.ExhibitorID" kind="Data" expr="ExhibitorID" caption="ExhibitorID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Sponsor">
+        <Operators />
+      </Attr>
+      <Attr id="Sponsor.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Sponsor">
+        <Operators />
+      </Attr>
+      <Attr id="Sponsor.SponsorLogo" kind="Data" expr="SponsorLogo" caption="SponsorLogo" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Sponsor">
+        <Operators />
+      </Attr>
+      <Attr id="Sponsor.LogoWidth" kind="Data" expr="LogoWidth" caption="LogoWidth" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Sponsor">
+        <Operators />
+      </Attr>
+      <Attr id="Sponsor.LogoHeight" kind="Data" expr="LogoHeight" caption="LogoHeight" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Sponsor">
+        <Operators />
+      </Attr>
+      <Attr id="Sponsor.SponsorTypeID" kind="Data" expr="SponsorTypeID" caption="SponsorTypeID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="Sponsor">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="SponsorType" UIC="True" UIR="True" UIS="True">
+      <Attr id="SponsorType.SponsorTypeID" kind="Data" expr="SponsorTypeID" caption="SponsorTypeID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="SponsorType">
+        <Operators />
+      </Attr>
+      <Attr id="SponsorType.SponsorType" kind="Data" expr="SponsorType" caption="SponsorType" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="SponsorType">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="TopicGroup" UIC="True" UIR="True" UIS="True">
+      <Attr id="TopicGroup.TopicGroupID" kind="Data" expr="TopicGroupID" caption="TopicGroupID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TopicGroup">
+        <Operators />
+      </Attr>
+      <Attr id="TopicGroup.ConferenceID" kind="Data" expr="ConferenceID" caption="ConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TopicGroup">
+        <Operators />
+      </Attr>
+      <Attr id="TopicGroup.TopicGroup" kind="Data" expr="TopicGroup" caption="TopicGroup" type="String" size="500" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TopicGroup">
+        <Operators />
+      </Attr>
+      <Attr id="TopicGroup.TopicGroupCode" kind="Data" expr="TopicGroupCode" caption="TopicGroupCode" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TopicGroup">
+        <Operators />
+      </Attr>
+    </Entity>
+    <Entity id="" name="TransactionLog" UIC="True" UIR="True" UIS="True">
+      <Attr id="TransactionLog.TransactionLogID" kind="Data" expr="TransactionLogID" caption="TransactionLogID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionInvoice" kind="Data" expr="TransactionInvoice" caption="TransactionInvoice" type="String" size="20" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionParticipationID" kind="Data" expr="TransactionParticipationID" caption="TransactionParticipationID" type="String" size="50" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionResponseCode" kind="Data" expr="TransactionResponseCode" caption="TransactionResponseCode" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionResponseReasonCode" kind="Data" expr="TransactionResponseReasonCode" caption="TransactionResponseReasonCode" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionConferenceID" kind="Data" expr="TransactionConferenceID" caption="TransactionConferenceID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionPersonID" kind="Data" expr="TransactionPersonID" caption="TransactionPersonID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionAmount" kind="Data" expr="TransactionAmount" caption="TransactionAmount" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionReceivedByPaymentGateway" kind="Data" expr="TransactionReceivedByPaymentGateway" caption="TransactionReceivedByPaymentGateway" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionDateTime" kind="Data" expr="TransactionDateTime" caption="TransactionDateTime" type="DateTime" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+      <Attr id="TransactionLog.TransactionID" kind="Data" expr="TransactionID" caption="TransactionID" type="String" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TransactionLog">
+        <Operators />
+      </Attr>
+    </Entity>
+  </Entities>
+</DataModel>

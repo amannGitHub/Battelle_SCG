@@ -1,0 +1,78 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Admin.master.vb" Inherits="Battelle.Admin" %>
+
+<%@ Import Namespace="Microsoft.AspNet.Identity" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body class="admin">
+    <form runat="server">
+        
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Battelle Conference Administration</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><asp:HyperLink ID="lnkAdminSCG" runat="server" NavigateUrl="~/admin/scg">SCG Admin</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="lnkAdminBattelle" runat="server" NavigateUrl="~/admin/default">Battelle Admin</asp:HyperLink></li>
+                        <!--<li><a runat="server" href="~/admin/abstracts/sediments2015">Abstracts</a></li>
+                        SCGTODO - FIX abstract nav link<li><a runat="server" href="~/About">About</a></li>
+                            <li><a runat="server" href="~/admin/exhibit/list">Exhibit</a></li>-->
+
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                 <p>
+                    <small><asp:Label ID="lblSCG" runat="server" Text="Developed by The Scientific Consulting Group, Inc."></asp:Label></small>
+                </p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
+

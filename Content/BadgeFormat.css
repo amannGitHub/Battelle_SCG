@@ -1,0 +1,37 @@
+﻿td{
+    width: 300px;
+    text-align: center;
+}
+
+#FormView1_FirstNameLabel{
+    font-size: 28pt;
+    font-family: Verdana;
+    font-weight: bold;
+}
+
+#FormView1_LastNameLabel{
+    font-size: 28pt;
+    font-family: Verdana;
+    font-weight: bold;
+}
+
+#FormView1_EmployerLabel{
+    font-style: italic;
+    font-size: 17pt;
+    font-family: Georgia;
+}
+
+#FormView1_CityLabel{
+    font-family: Georgia;
+    font-size: 13pt;
+}
+
+#FormView1_StateProvinceLabel{
+    font-family: Georgia;
+    font-size: 13pt;
+}
+
+#FormView1_CountryLabel{
+    font-family: Georgia;
+    font-size: 13pt;
+}
